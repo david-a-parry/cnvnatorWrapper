@@ -19,6 +19,7 @@ Detailed usage information for the cnvnatorWrapperl.pl script is available by in
 __TO DO__
 
 -Maybe support other shells. 
+
 -Make thread allocation more sophisticated (e.g. allow user to specify max threads).
 
 Really this depends on whether anyone other than me ends up using this and wants any of these features. These should both be easy to acheive.
