@@ -6,7 +6,7 @@ Note: you must be using bash as your shell when running cnvnatorWrapper.pl to al
 
 __INSTALL__
 
-This version should run as is on 64-bit Debian 7.1 after decompressing the chromosome fasta files in the 'fasta' folder (e.g. "gzip -d fasta/\*.gz"). For other systems you will have to recompile CNVnator and ROOT (or download the appropriate binary for your system). 
+This version should run as is on 64-bit Debian 7 after decompressing the chromosome fasta files in the 'fasta' folder (e.g. "gzip -d fasta/\*.gz"). For other systems you will have to recompile CNVnator and ROOT (or download the appropriate binary for your system). 
 
 To set this up on a different system, recompile CNVnator as per the instructions in CNVnator\_v0.3/README. You then need to delete the 'root' directory and its contents, download or compile version 5.34 of ROOT (https://root.cern.ch/drupal/content/production-version-534) ensuring the resulting files are in a directory named 'root'.
 
