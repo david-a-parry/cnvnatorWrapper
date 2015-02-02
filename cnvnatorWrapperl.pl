@@ -57,7 +57,7 @@ print STDERR "Sourcing root env variables from $root_dir.\n";
 my $bsh = Shell::Source->new(shell => "bash", file => "$root_dir/bin/thisroot.sh");
 $bsh->inherit();
 print STDERR $bsh->output;
-print $bsh->shell;
+print STDERR $bsh->shell;
 my $c = 0;
 my %commands = ();
 my @exts = qw (.bam .sam .cram .BAM .SAM .CRAM);
@@ -77,7 +77,7 @@ foreach my $bam (@input){
     $commands{$bam}->{$n++} = "$cnvnator -root $output_prefix.root -partition $window";
     $commands{$bam}->{$n++} = "$cnvnator -root $output_prefix.root -call $window > $output_prefix.root.calls";
     $commands{$bam}->{$n++} = "$vcf_converter $output_prefix.root.calls $fasta_dir > $vcf_out";
-    $c < $n ? $c = $n : $c = $c;
+    $c = $c < $n ? $n : $c;
 }
 
 for (my $i = 0; $i < $c ; $i++){
@@ -104,7 +104,7 @@ sub runCommand{
 	my $exit_status = 0 ;
     if (not  $opts{dry_run}){
         system $com;
-	    $exit_status = $?;
+        $exit_status = $?;
     }
     my $end_time = strftime "%a %b %e %Y: %H:%M:%S", localtime;
     if ($exit_status == 0){
